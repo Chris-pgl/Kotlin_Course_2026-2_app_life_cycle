@@ -17,6 +17,9 @@ import com.example.app_life_cycle.ui.theme.App_life_cycleTheme
 
 //App creata per capire meglio il ciclo di vita dell'applicazione
 class MainActivity : ComponentActivity() {
+
+
+    //Quando l'applicazione viene creata
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -29,9 +32,20 @@ class MainActivity : ComponentActivity() {
 
     }
 
-
+    //Quando l'applicazione viene creata
     override fun onStart() {
         super.onStart()
+    }
+
+    //Quando l'applicazione viene ripresa
+    override fun onResume() {
+        super.onResume()
+    }
+
+
+    //Quando l'applicazione viene interrotta
+    override fun onStop() {
+        super.onStop()
     }
 
 
