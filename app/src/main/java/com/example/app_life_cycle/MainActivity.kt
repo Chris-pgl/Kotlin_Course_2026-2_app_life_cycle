@@ -42,7 +42,19 @@ class MainActivity : ComponentActivity() {
     }
 
 
+
+
+    //Quando l'applicazione viene distrutta
+    override fun onDestroy() {
+        super.onDestroy()
+    }
+
+    //Quando l'applicazione viene interrotta
+    override fun onPause() {
+
+    }
 }
+
 
 
 
