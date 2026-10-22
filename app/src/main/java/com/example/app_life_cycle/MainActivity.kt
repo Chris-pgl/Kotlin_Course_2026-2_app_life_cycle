@@ -1,6 +1,8 @@
 package com.example.app_life_cycle
 
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -8,13 +10,14 @@ import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-
+import androidx.core.net.toUri
 
 
 //App creata per capire meglio il ciclo di vita dell'applicazione
 class MainActivity : ComponentActivity() {
 
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView() è per il layout tradizionale con xml
@@ -30,6 +33,7 @@ class MainActivity : ComponentActivity() {
         val titolo = findViewById<TextView>(R.id.txtTitolo)
         val btnGoToSecond = findViewById<Button>(R.id.btnGoToSecond)
 
+
         /**
          * Intent - permette comunicazioni tra componenti differenti nell'app
          *
@@ -44,6 +48,12 @@ class MainActivity : ComponentActivity() {
          */
         btnGoToSecond.setOnClickListener {
             goToSecondActivity()
+        }
+
+
+        val googleBtn = findViewById<Button>(R.id.btnGoogle)
+        googleBtn.setOnClickListener {
+            openWebGoogle()
         }
 
 
@@ -192,6 +202,18 @@ class MainActivity : ComponentActivity() {
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
     }
+
+    fun openWebGoogle(){
+        val webGoogle = "https://www.google.com".toUri()
+        val intentW = Intent(Intent.ACTION_VIEW, webGoogle)
+        startActivity(intentW)
+    }
+
+    /**
+     * Impliciti Intent..
+     */
+
+
 }
 
 
