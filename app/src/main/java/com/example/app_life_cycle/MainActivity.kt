@@ -1,6 +1,8 @@
 package com.example.app_life_cycle
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.ComponentActivity
@@ -15,24 +17,45 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //setContentView() è per il layout tradizionale con xml
         setContentView(  R.layout.activity_main )
+
+        //setContent{}
+        //è per jetCompose
 
 
         // Qui inizializza la UI e le variabili
         Toast.makeText(this, "OnCreate() is Called",Toast.LENGTH_SHORT).show()
 
         val titolo = findViewById<TextView>(R.id.txtTitolo)
+        val btnGoToSecond = findViewById<Button>(R.id.btnGoToSecond)
+
+        /**
+         * Intent - permette comunicazioni tra componenti differenti nell'app
+         *
+         * Tipi di Intent:
+         *  Espliciti Intent
+         *  Impliciti Intent
+         */
+
+        /**
+         * Espliciti Intent
+         * vengono utilizzati per un componente specifico, specificando il target
+         */
+        btnGoToSecond.setOnClickListener {
+            goToSecondActivity()
+        }
+
+
 
     }
 
 
 
 
-
-
     /**
      * Questo metodo viene chiamato quando l'attività diventa visibile all'utente
-     * E' il punto di partenza delle animazioni di entrata o compiti legati all'interfaccia utente
+     * è il punto di partenza delle animazioni di entrata o compiti legati all'interfaccia utente
      */
     override fun onStart() {
         super.onStart()
@@ -54,7 +77,7 @@ class MainActivity : ComponentActivity() {
 
     /**
      * Questo metodo viene richiamato quando l'attività perde il focus e si mette in background
-     * per avviare un altra activity o il dispositivo è in modalitàaddTask/multifinestra
+     * per avviare un altra activity o il dispositivo è in modalità addTask/multifinestra
      */
     override fun onPause() {
         super.onPause()
@@ -75,7 +98,7 @@ class MainActivity : ComponentActivity() {
 
 
     /**
-     * E' richianato dopo onStop() o quando perde il focus e va in backGround
+     * Questo metodo viene richiamato dopo onStop() o quando perde il focus e va in backGround
      * e seguita da onResume()
      */
     override fun onRestart() {
@@ -107,7 +130,7 @@ class MainActivity : ComponentActivity() {
      */
 
     /**
-     * quindi se l'utente apre l'app
+     * Quindi se l'utente apre l'app
      * onCreate() ->
      * onStart() ->
      * onResume() ->
@@ -148,7 +171,27 @@ class MainActivity : ComponentActivity() {
      *
      */
 
+    //--------------------------------------------------
 
+
+
+    /**
+     * Intent - permette comunicazioni tra componenti differenti nell'app
+     *
+     * Tipi di Intent:
+     *  Espliciti Intent
+     *  Impliciti Intent
+     */
+
+
+    /**
+     * Espliciti Intent
+     * vengono utilizzati per un componente specifico, specificando il target
+     */
+    fun goToSecondActivity(){
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
+    }
 }
 
 
