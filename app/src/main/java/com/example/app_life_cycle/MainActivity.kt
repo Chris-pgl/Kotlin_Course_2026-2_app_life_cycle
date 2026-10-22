@@ -57,6 +57,13 @@ class MainActivity : ComponentActivity() {
         }
 
 
+        val luckyBtn = findViewById<Button>(R.id.btnLucky)
+        luckyBtn.setOnClickListener {
+            goToLuckyGame()
+        }
+
+
+
 
     }
 
@@ -207,6 +214,11 @@ class MainActivity : ComponentActivity() {
         val webGoogle = "https://www.google.com".toUri()
         val intentW = Intent(Intent.ACTION_VIEW, webGoogle)
         startActivity(intentW)
+    }
+
+    fun goToLuckyGame(){
+        val int = Intent(this, LuckyNumActivity::class.java)
+        startActivity(int)
     }
 
     /**
