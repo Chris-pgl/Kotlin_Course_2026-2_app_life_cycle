@@ -5,6 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/first"
     tools:context=".LuckyNumActivity">
 
     <TextView
@@ -14,6 +15,7 @@
         android:layout_marginTop="88dp"
         android:text="Welcome to Lucky Number Game!!"
         android:textSize="23dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +28,8 @@
         android:layout_marginTop="92dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Enter your Lucky Name"
+        android:textColorHint="@color/white"
+        android:hint="Enter your Lucky Name"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -40,6 +43,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintStart_toStartOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/imageViw"
+        android:layout_width="243dp"
+        android:layout_height="153dp"
+        android:layout_marginBottom="52dp"
+        android:src="@drawable/dicee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.52"
+        app:layout_constraintStart_toStartOf="@+id/button" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

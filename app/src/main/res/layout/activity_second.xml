@@ -5,27 +5,43 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/even_numb"
     tools:context=".SecondActivity">
 
     <TextView
-        android:id="@+id/txtSecondTitle"
+        android:id="@+id/textV3Activ2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Seconda Activity"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="160dp"
+        android:text="Your Lucky Number is:"
+        android:textSize="32dp"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnBack"
+    <TextView
+        android:id="@+id/luckyNumtext2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Torna Indietro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtSecondTitle" />
+        android:text="3"
+        android:textColor="@color/white"
+        android:textSize="64dp"
+        android:layout_marginBottom="368dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textV3Activ2"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/textV3Activ2" />
+
+    <Button
+        android:id="@+id/btnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="160dp"
+        android:text="Go Home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/luckyNumtext2"
+        app:layout_constraintStart_toStartOf="@+id/luckyNumtext2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
