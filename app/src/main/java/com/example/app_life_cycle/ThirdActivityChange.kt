@@ -1,6 +1,8 @@
 package com.example.app_life_cycle
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,12 +15,32 @@ class ThirdActivityChange : AppCompatActivity() {
         setContentView(R.layout.activity_third_change)
 
 
-        //settare cambio schermata
+        val userName = intent.getStringExtra("USER_NAME")
+        val luckyNumber = intent.getIntExtra("LUCKY_NUMBER",0)
+
+        val luckyNumText = findViewById<TextView>(R.id.luckyNumtext)
+        val btntoHome = findViewById<Button>(R.id.btnHome2)
+        val txtUserName = findViewById<TextView>(R.id.userNam)
+
+        txtUserName.text = "Hello $userName!!"
+        luckyNumText.text = luckyNumber.toString()
+
+        btntoHome.setOnClickListener {
+            finish()
+        }
+
     }
 
 
 
 
+
+
+
+
+
+
+//---------------------------------------------------------------------------------------------------------------------------
     /**
      * Questo metodo viene chiamato quando l'attività diventa visibile all'utente
      * è il punto di partenza delle animazioni di entrata o compiti legati all'interfaccia utente

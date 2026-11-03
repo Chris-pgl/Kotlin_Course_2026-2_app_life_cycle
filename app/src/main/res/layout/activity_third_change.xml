@@ -10,6 +10,18 @@
 
 
     <TextView
+        android:id="@+id/userNam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="Hello Player!"
+        android:textSize="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/textV3Activ"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/textV3Activ"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
         android:id="@+id/textV3Activ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -34,11 +46,13 @@
         app:layout_constraintStart_toStartOf="@+id/textV3Activ" />
 
     <Button
+        android:id="@+id/btnHome2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="244dp"
         android:text="Go Home"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/luckyNumtext"
         app:layout_constraintStart_toStartOf="@+id/luckyNumtext"
         app:layout_constraintTop_toBottomOf="@+id/luckyNumtext"
         app:layout_constraintVertical_bias="0.0" />
