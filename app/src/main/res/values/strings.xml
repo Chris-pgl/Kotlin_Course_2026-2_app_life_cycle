@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">app_life_cycle</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -41,5 +41,17 @@
         sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+
+    <string name="cycleLife" tools:ignore="StringEscaping">
+        Ciclo di vita di un app:\n
+         * La logica segue:\n
+         * onCreate() ->  l'Activity viene creata.\n
+         * onStart() ->  l'Activity diventa visibile.\n
+         * onResume() ->  l'Activity è in primo piano e interattiva.\n
+         * onPause() ->  l'Activity perde lo stato di primo piano.\n
+         * onStop() ->  l'Activity non è più visibile.\n
+         * onRestart() ->  l'Activity sta tornando da uno stato Stopped.\n
+         * onDestroy() ->  l'Activity sta per essere distrutta.\n
     </string>
 </resources>
