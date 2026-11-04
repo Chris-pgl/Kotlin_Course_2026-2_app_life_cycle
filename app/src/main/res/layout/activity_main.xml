@@ -21,26 +21,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.178" />
 
-    <Button
-        android:id="@+id/btnGoToSecond"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Vai alla Seconda Activity"
-        app:layout_constraintEnd_toEndOf="@+id/txtTitolo"
-        app:layout_constraintStart_toStartOf="@+id/txtTitolo"
-        app:layout_constraintTop_toBottomOf="@id/txtTitolo" />
 
     <Button
         android:id="@+id/btnGoogle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:text="Google"
         app:layout_constraintEnd_toEndOf="@+id/txtTitolo"
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="@+id/txtTitolo"
-        app:layout_constraintTop_toBottomOf="@+id/btnGoToSecond" />
+        tools:layout_editor_absoluteY="258dp" />
 
     <Button
         android:id="@+id/btnLucky"
