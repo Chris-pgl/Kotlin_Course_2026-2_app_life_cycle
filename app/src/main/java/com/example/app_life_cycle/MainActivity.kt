@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -73,6 +74,14 @@ class MainActivity : ComponentActivity() {
     }
 
 
+    /**
+     * Creo un menu
+     */
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.my_menu, menu)
+        return super.onCreateOptionsMenu(menu)
+    }
 
 
     /**

@@ -23,29 +23,30 @@
         android:id="@+id/goTolifeappinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="116dp"
+        android:layout_marginBottom="36dp"
 
         android:text="Go to Info Life Cicle"
         app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
         app:layout_constraintEnd_toEndOf="@+id/infoHome"
+        app:layout_constraintHorizontal_bias="0.452"
         app:layout_constraintStart_toStartOf="@+id/infoHome" />
 
     <Button
         android:id="@+id/btnLucky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="88dp"
         android:text="Go to Lucky Game!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/btnGoogle"
-        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="@+id/btnGoogle" />
 
     <Button
         android:id="@+id/btnGoogle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="164dp"
+        android:layout_marginBottom="68dp"
         android:text="Google"
         app:layout_constraintBottom_toTopOf="@+id/btnLucky"
         app:layout_constraintEnd_toEndOf="@+id/infoHome"
