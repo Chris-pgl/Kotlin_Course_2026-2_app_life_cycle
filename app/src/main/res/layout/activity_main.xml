@@ -9,50 +9,47 @@
 
 
     <TextView
-        android:id="@+id/txtTitolo"
+        android:id="@+id/infoHome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ciclo di vita dell'Activity"
-        android:textColor="@color/black"
-        android:textSize="22sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="144dp"
+        android:text="Welcome Home App"
+        android:textSize="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.115" />
-
-    <TextView
-        android:layout_width="300dp"
-        android:layout_height="347dp"
-        android:layout_marginBottom="64dp"
-        android:text="@string/cycleLife"
-        android:textAlignment="center"
-        android:textSize="18dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
-        app:layout_constraintEnd_toEndOf="@+id/txtTitolo"
-        app:layout_constraintStart_toStartOf="@+id/txtTitolo" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnGoogle"
+        android:id="@+id/goTolifeappinfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
-        android:text="Google"
-        app:layout_constraintBottom_toTopOf="@+id/btnLucky"
-        app:layout_constraintEnd_toEndOf="@+id/txtTitolo"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="@+id/txtTitolo"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginBottom="116dp"
+
+        android:text="Go to Info Life Cicle"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
+        app:layout_constraintEnd_toEndOf="@+id/infoHome"
+        app:layout_constraintStart_toStartOf="@+id/infoHome" />
 
     <Button
         android:id="@+id/btnLucky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="60dp"
         android:text="Go to Lucky Game!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txtTitolo"
-        app:layout_constraintStart_toStartOf="@+id/txtTitolo" />
+        app:layout_constraintEnd_toEndOf="@+id/btnGoogle"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/btnGoogle" />
+
+    <Button
+        android:id="@+id/btnGoogle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="164dp"
+        android:text="Google"
+        app:layout_constraintBottom_toTopOf="@+id/btnLucky"
+        app:layout_constraintEnd_toEndOf="@+id/infoHome"
+        app:layout_constraintStart_toStartOf="@+id/infoHome"
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

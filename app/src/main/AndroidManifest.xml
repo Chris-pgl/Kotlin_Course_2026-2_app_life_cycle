@@ -40,6 +40,10 @@
             android:name=".ThirdActivityChange"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MainActivity_cycleOfLifeAppInfo"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
     </application>
 
 </manifest>

@@ -43,15 +43,15 @@
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
 
-    <string name="cycleLife" tools:ignore="StringEscaping">
-        Ciclo di vita di un app:\n
-         * La logica segue:\n
-         * onCreate() ->  l'Activity viene creata.\n
-         * onStart() ->  l'Activity diventa visibile.\n
-         * onResume() ->  l'Activity è in primo piano e interattiva.\n
-         * onPause() ->  l'Activity perde lo stato di primo piano.\n
-         * onStop() ->  l'Activity non è più visibile.\n
-         * onRestart() ->  l'Activity sta tornando da uno stato Stopped.\n
-         * onDestroy() ->  l'Activity sta per essere distrutta.\n
-    </string>
+    <string name="cycleLife">
+    Ciclo di vita di un app:\n
+    * La logica segue:\n
+    * onCreate() -> l\'Activity viene creata.\n
+    * onStart() -> l\'Activity diventa visibile.\n
+    * onResume() -> l\'Activity è in primo piano e interattiva.\n
+    * onPause() -> l\'Activity perde lo stato di primo piano.\n
+    * onStop() -> l\'Activity non è più visibile.\n
+    * onRestart() -> l\'Activity sta tornando da uno stato Stopped.\n
+    * onDestroy() -> l\'Activity sta per essere distrutta.\n
+</string>
 </resources>

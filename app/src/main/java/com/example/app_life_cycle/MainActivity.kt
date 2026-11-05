@@ -31,7 +31,7 @@ class MainActivity : ComponentActivity() {
         Toast.makeText(this, "OnCreate() is Called",Toast.LENGTH_SHORT).show()
 
         val titolo = findViewById<TextView>(R.id.txtTitolo)
-        val btnGoToSecond = findViewById<Button>(R.id.btnGoToSecond)
+        val btnGoToSecond = findViewById<Button>(R.id.btnLucky)
 
 
         /**
@@ -62,6 +62,11 @@ class MainActivity : ComponentActivity() {
             goToLuckyGame()
         }
 
+        val infoBtn = findViewById<Button>(R.id.goTolifeappinfo)
+        infoBtn.setOnClickListener {
+            goTolifeappinfo()
+        }
+
 
 
 
@@ -80,6 +85,10 @@ class MainActivity : ComponentActivity() {
     }
 
 
+    fun goTolifeappinfo(){
+        val int = Intent(this, MainActivity_cycleOfLifeAppInfo::class.java)
+        startActivity(int)
+    }
 
     /**
      * Questo metodo viene chiamato quando l'attività è in primo piano e
