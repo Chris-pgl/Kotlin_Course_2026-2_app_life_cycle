@@ -32,6 +32,18 @@
         app:layout_constraintStart_toStartOf="@+id/infoHome" />
 
     <Button
+        android:id="@+id/gotoWidget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+
+        android:text="Go to widgets"
+        app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
+        app:layout_constraintEnd_toEndOf="@+id/infoHome"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="@+id/infoHome" />
+
+    <Button
         android:id="@+id/btnLucky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

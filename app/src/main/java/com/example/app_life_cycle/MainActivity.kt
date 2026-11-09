@@ -68,6 +68,10 @@ class MainActivity : ComponentActivity() {
             goTolifeappinfo()
         }
 
+        val widgetBTN = findViewById<Button>(R.id.gotoWidget)
+        widgetBTN.setOnClickListener {
+            goToWidget()
+        }
 
 
 
@@ -82,6 +86,8 @@ class MainActivity : ComponentActivity() {
         menuInflater.inflate(R.menu.my_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
+
+
 
 
     /**
@@ -236,6 +242,11 @@ class MainActivity : ComponentActivity() {
 
     fun goToLuckyGame(){
         val int = Intent(this, LuckyNumActivity::class.java)
+        startActivity(int)
+    }
+
+    fun goToWidget(){
+        val int = Intent(this, Activity_widgets::class.java)
         startActivity(int)
     }
 
