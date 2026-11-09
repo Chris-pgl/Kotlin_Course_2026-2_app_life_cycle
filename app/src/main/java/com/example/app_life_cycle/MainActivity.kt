@@ -78,32 +78,55 @@ class MainActivity : ComponentActivity() {
     }
 
 
+    fun goToSecondActivity(){
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun openWebGoogle(){
+        val webGoogle = "https://www.google.com".toUri()
+        val intentW = Intent(Intent.ACTION_VIEW, webGoogle)
+        startActivity(intentW)
+    }
+
+    fun goToLuckyGame(){
+        val int = Intent(this, LuckyNumActivity::class.java)
+        startActivity(int)
+    }
+
+    fun goToWidget(){
+        val int = Intent(this, Activity_widgets::class.java)
+        startActivity(int)
+    }
+
+    fun goTolifeappinfo(){
+        val int = Intent(this, MainActivity_cycleOfLifeAppInfo::class.java)
+        startActivity(int)
+    }
+
+
     /**
      * Creo un menu
-     */
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.my_menu, menu)
         return super.onCreateOptionsMenu(menu)
     }
-
+    */
 
 
 
     /**
      * Questo metodo viene chiamato quando l'attività diventa visibile all'utente
      * è il punto di partenza delle animazioni di entrata o compiti legati all'interfaccia utente
-     */
+
     override fun onStart() {
         super.onStart()
         Toast.makeText(this, "onStart() is Called",Toast.LENGTH_SHORT).show()
     }
 
 
-    fun goTolifeappinfo(){
-        val int = Intent(this, MainActivity_cycleOfLifeAppInfo::class.java)
-        startActivity(int)
-    }
+
 
     /**
      * Questo metodo viene chiamato quando l'attività è in primo piano e
@@ -157,7 +180,7 @@ class MainActivity : ComponentActivity() {
         Toast.makeText(this, "onDestroy() is Called",Toast.LENGTH_SHORT).show()
 
 
-    }
+    }  */
 
     /**
      * La logica segue:
@@ -229,26 +252,7 @@ class MainActivity : ComponentActivity() {
      * Espliciti Intent
      * vengono utilizzati per un componente specifico, specificando il target
      */
-    fun goToSecondActivity(){
-        val intent = Intent(this, SecondActivity::class.java)
-        startActivity(intent)
-    }
 
-    fun openWebGoogle(){
-        val webGoogle = "https://www.google.com".toUri()
-        val intentW = Intent(Intent.ACTION_VIEW, webGoogle)
-        startActivity(intentW)
-    }
-
-    fun goToLuckyGame(){
-        val int = Intent(this, LuckyNumActivity::class.java)
-        startActivity(int)
-    }
-
-    fun goToWidget(){
-        val int = Intent(this, Activity_widgets::class.java)
-        startActivity(int)
-    }
 
     /**
      * Impliciti Intent..

@@ -35,12 +35,12 @@
         android:id="@+id/gotoWidget"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="140dp"
 
-        android:text="Go to widgets"
+        android:text="Vuoi una pizza??"
         app:layout_constraintBottom_toTopOf="@+id/btnGoogle"
         app:layout_constraintEnd_toEndOf="@+id/infoHome"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="@+id/infoHome" />
 
     <Button
