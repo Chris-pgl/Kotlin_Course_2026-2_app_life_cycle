@@ -66,9 +66,19 @@ class Activity_widgets : AppCompatActivity() {
 
         val radioGrup = findViewById<RadioGroup>(R.id.radioGroup1)
         radioGrup.setOnCheckedChangeListener { group, idchecked ->
-
-            val radioBtnForGlutenFree = findViewById<RadioGroup>(idchecked)
-            Toast.makeText(this, "Gluten Free: ${radioBtnForGlutenFree.toString().text}", Toast.LENGTH_SHORT).show()
+        /*
+            val radioBtnForGlutenFree = findViewById<RadioButton>(idchecked)
+            Toast.makeText(this, "Gluten Free: ${radioBtnForGlutenFree.text}", Toast.LENGTH_SHORT).show()
+        }
+        Oppure ancora meglio cercando gli id */
+            when (idchecked){
+                R.id.yesGlutenFree -> {
+                    Toast.makeText(this, "Pasta da pizza senza Glutine", Toast.LENGTH_SHORT).show()
+                }
+                R.id.noGlutenFree -> {
+                    Toast.makeText(this, "Pasta da pizza normale", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
 
 

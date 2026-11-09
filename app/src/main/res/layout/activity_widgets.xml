@@ -16,7 +16,7 @@
         android:layout_marginTop="40dp"
         android:text="check what u want in our pizza!"
         android:textColor="@color/black"
-        android:textSize="28dp"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -105,7 +105,7 @@
         android:layout_marginBottom="328dp"
         android:text="want Gluten Free pizza?"
         android:textColor="@color/black"
-        android:textSize="24dp"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.962"
