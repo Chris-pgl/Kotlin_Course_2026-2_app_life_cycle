@@ -2,10 +2,12 @@ package com.example.app_life_cycle
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.RadioButton
 import android.widget.RadioGroup
+import android.widget.Spinner
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -13,6 +15,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 class Activity_widgets : AppCompatActivity() {
+
 
 
 
@@ -81,6 +84,18 @@ class Activity_widgets : AppCompatActivity() {
             }
         }
 
+
+        val spinner = findViewById<Spinner>(R.id.spinner)
+        //array Adapter
+        val calzoneOrPizzaSpinner = arrayOf("Seleziona Pizza or Calzone","Calzone","Pizza")
+        val adapter = ArrayAdapter(this,android.R.layout.simple_spinner_item,calzoneOrPizzaSpinner)
+        adapter.setDropDownViewResource(R.layout.spinner_item)
+        spinner.adapter = adapter
+        if (spinner.selectedItemPosition == 0){
+            Toast.makeText(this, "Seleziona Pizza or Calzone", Toast.LENGTH_SHORT).show()
+        }else{
+            val scelta = spinner.selectedItem.toString()
+        }
 
     }
 
